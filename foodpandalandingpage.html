@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodpanda Pakistan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+}
+.navbar {
+  background-color: #d70f64;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar .nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar .nav-buttons button {
+  background-color: white;
+  color: #d70f64;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar .nav-buttons button:hover {
+  background-color: #ffe0eb;
+}
+
+.address-bar {
+  background-color: #fbe3ed;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.address-bar p {
+  margin: 0;
+}
+
+.address-bar .account-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.address-bar .account-links a {
+  color: #d70f64;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.address-bar .account-links span {
+  font-size: 14px;
+}
+.menu-tabs {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+}
+
+.menu-tabs a {
+  color: #d70f64;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.menu-tabs a:hover {
+  color: #ff69b4; /* highlight on hover */
+}
+
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fbe3ed;
+    }
+
+    .hero h2 {
+      color: #d70f64;
+      margin-bottom: 15px;
+    }
+
+    .hero input {
+      padding: 10px;
+      width: 60%;
+      max-width: 320px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .cuisines {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cuisine img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    .cuisine:hover img {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .restaurants {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .restaurant {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    .restaurant:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: scale(1.02);
+    }
+
+    .restaurant img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .restaurant-info {
+      padding: 10px;
+    }
+
+    .restaurant-info h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #d70f64;
+    }
+
+    .restaurant-info p {
+      margin: 5px 0 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .about-delivery {
+      background: #f9f9f9;
+      padding: 30px 15px;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .about-delivery h2 {
+      color: #d70f64;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .about-delivery p {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<div class="navbar">
+  <h1>Foodpanda</h1>
+  <div class="nav-buttons">
+    <button>Be a Restaurant Partner</button>
+    <button>Business Account</button>
+  </div>
+</div>
+<div class="address-bar">
+  <p>📍 New address: Service Road W, Islamabad</p>
+  <div class="account-links">
+    <a href="#">Log In</a>
+    <a href="#">Sign Up for Free Delivery</a>
+    <span>🛒</span>
+    <span>🌐 EN ▼</span>
+  </div>
+</div>
+
+<div class="menu-tabs">
+  <a href="#">Delivery</a>
+  <a href="#">Pick-Up</a>
+  <a href="#">Pandamart</a>
+  <a href="#">Shops</a>
+  <a href="#">Caterers</a>
+</div>
+<center>
+<div class="search-bar" style="text-align:center; margin:15px 0; position: relative; display: inline-block; width: 60%; max-width: 400px;">
+  <input type="text" placeholder="Search for restaurants or cuisines" 
+         style="padding:10px 35px 10px 10px; width:100%; border-radius:6px; border:1px solid #ccc;">
+  
+  <span style="position:absolute; right:10px; top:50%; transform:translateY(-50%); font-size:18px; color:#888;">🔍</span>
+</div>
+</center>
+
+
+
+</div>
+
+</div>
+
+<div class="hero">
+  <h2 style="color:#ff69b4;">Sign up for free delivery on your first order</h2>
+  <button style="
+      padding:12px 25px;
+      font-size:16px;
+      color:white;
+      background:#d70f64;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      margin-top:15px;
+  ">
+    Sign Up
+  </button>
+</div>
+
+
+<h2>Cuisines</h2>
+  <div class="cuisines">
+    <div class="cuisine">
+      <img src="pizza.jpg" alt="Pizza">
+      <p>Pizza</p>
+    </div>
+    <div class="cuisine">
+      <img src="biryani.avif" alt="Biryani">
+      <p>Briyani</p>
+    </div>
+    <div class="cuisine">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Burgers">
+      <p>Burgers</p>
+    </div>
+    <div class="cuisine">
+      <img src="chicken nuggets.webp" alt="Fast Food">
+      <p>Fast Food</p>
+    </div>
+    <div class="cuisine">
+      <img src="paratha.avif" alt="Paratha">
+      <p>Paratha</p>
+    </div>
+    <div class="cuisine">
+      <img src="gulab-jamun-2-scaled.webp" alt="Desserts">
+      <p>Desserts</p>
+    </div>
+    <div class="cuisine">
+      <img src="halwa puri.jpg" alt="Halwa Puri">
+      <p>Halwa Puri</p>
+    </div>
+  </div>
+<h2>All Restaurants</h2>
+  <div class="restaurants">
+    <div class="restaurant">
+      <img src="pizza.jpg" alt="Broadway Pizza">
+      <div class="restaurant-info">
+        <h3>Broadway Pizza</h3>
+        <p>Pizza • Fast Food</p>
+      </div>
+    </div>
+    <div class="restaurant">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="OPTP">
+      <div class="restaurant-info">
+        <h3>OPTP</h3>
+        <p>Burgers • Fast Food</p>
+      </div>
+    </div>
+    <div class="restaurant">
+      <img src="biryani.avif" alt="Student Biryani">
+      <div class="restaurant-info">
+        <h3>Student Biryani</h3>
+        <p>Biryani • Pakistani</p>
+      </div>
+    </div>
+    <div class="restaurant">
+      <img src="kababjees.jpg" alt="Kababjeees">
+      <div class="restaurant-info">
+        <h3>kababjees</h3>
+        <p>BBQ • Pakistani</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <h2>Food delivery in Islamabad has never been easier</h2>
+Pakistan's capital and a pulsating, energetic and cosmopolitan city, Islamabad enjoys a multicultural and diverse food scene. Thanks to its rapid urbanisation, you can find numerous international chains as well as incredibly popular local and traditional establishments, offering nearly unlimited cuisine options when it comes to dining out. What's even more exciting, food delivery in Islamabad is now made super-easy and convenient. Reason? foodpanda serves across the length and breadth of this largest city of Pakistan, enabling easy delivery from restaurants in Islamabad.
+
+<h2>Islamabad food delivery is just what modern fast-paced lifestyles need</h2>
+Aside from health reasons, savouring great food could be a wonderful stress-buster! Especially in a thriving metropolis like Islamabad, you would be leading a very busy lifestyle where food always takes a backseat. Late to the office? No time to prepare food for lunch? Lazy to get up on a Sunday morning? Well, these are just a few of the everyday scenarios where you are most likely going to skip your meals. With food delivery in Islamabad, you never have to forgo your food. With our online portal and mobile app, you can quickly choose from hundreds and hundreds of restaurants, cafes, and takeaways in your city and get satisfying, healthy and delicious food right at your doorstep!
+
+<h2>What to order from Islamabad restaurants for delivery</h2>
+Perhaps, you are a die-hard fan of local delicacies prepared in a traditional way. Angeethi, Andaaz, Al-Nakheel Lebanese Cuisine, and Islamabad Grill are a few of the excellent places you can consider for authentic Pakistani food prepared just like at home. If lucky, you can even snap up our fantastic food deals in Islamabad to save some decent money while indulging to your heart's content. Maybe, you are gathering together with your friends to watch that most awaited cricket match of the year. Why not order some wonderful food, desserts and drinks to spice up the moment? Fish Fingers, Chicken Strips, and Chili Fries from Incantare Cafe & Grill, or Rajasthani Chicken Malai boti with drink and Masala Fish With Naan + Drink from Humpty Dumpty are some of the best-selling options worth a try using our prompt food delivery in Islamabad. From Subway sandwiches to Johnny Rockets burgers, from Sarang Sindhi Cuisine's Chicken Briyani to Big Bites' Chicken Combo, from Fruit Factory's smoothies to Chick Fillet pizzas, our impressive selection of restaurants come handy to suit every taste, mood, and occasion
+
+<h2>Famous restaurants for online food Famousdelivery in Islamabad</h2> 
+Looking for the best pizza places in Islamabad? Want to treat your friends to the finest sandwiches in the city? Or simply love to experiment with your food choices or need late night foode delivery in Islamabad? Well, take advantage of these most popular Islamabad food delivery options, favoured by thousands of discerning foodies and casual customers alike.
+
+<h2>Top Restaurants of Islamabad include…</h2>
+✓ 14th Street Pizza: One of the best places for pizzas In Islamabad
+✓ KFC : Classic and beloved fried chicken
+✓ The New Yorker Pizza – another favourite of the city’s pizza lovers
+✓ McDonald's – needs no introduction and offers something for everyone
+✓ Char Grill Centre(CGC): Comfort food that everyone adores!
+
+<h2>Presenting “no-cook Ramzan” only by foodpanda</h2>
+Feeling tired? Don’t want to go out in this scorching hot weather? Here comes the solution to your problem. Now order food in Islamabad from your favourite restaurants through foodpanda and make your Ramzan flavorful with bestest Sehri and Iftari deals with free delivery services. foodpanda fulfil your cravings by delivering food at your doorstep.
+
+<h2>Foodpanda bringing your favourite food to your doorstep!</h2>
+foodpanda provides you ease to order through online food delivery in Islamabad. Ordering food becomes easier because foodpanda provides you free delivery with minimum order of just Rs.200/-. Want to have delicious Sehri without going out? Just order through foodpanda anytime. Ramzan is all about food, fasting becomes delightful when scrumptious Iftari delivered within minutes.
+
+<h2>Best Ramzan deals – for sehri and iftari available for delivery</h2>
+foodpanda giving major discounted deals to the people of Islamabad on Sehri and Iftari. So Islamabadis, don’t waste your time and boost your cravings this Ramzan with foodpanda delivery services without any hassle.
+<br>
+✓ KFC
+✓ Mcdonalds
+✓ Chaaye Khana
+✓ ChikaChino
+✓ Tuscany Courtyard
+✓ Street 1 cafe
+<br>
+https://images.deliveryhero.io/image/foodpanda/web-acquisition/fp/persistent-banner-logo.gif
+Welcome! Enjoy  Free delivery  and exclusive discount on your first order
+American Food Delivery in Islamabad
+McDonald's, KFC, OPTP - Jinnah Super, Subway, Cinnabon - Centaurus, American Steak House
+&nbsp;
+<br>
+Pizza Delivery in Islamabad
+Pizza Hut - Islamabad, New Yorker Pizza - Islamabad, 14th Street Pizza Co., Domino's Pizza, Tomatino Pizza Fiesta, Round House Pizza
+&nbsp;
+<br>
+Pakistani Food Delivery in Islamabad
+Chattha's, Gulshan Roll Inn & Fried Chicken, Desi Bites, Erum's Kitchen, Cheema & Chattha Restaurant, Spicy Neandoos Murgh Pulao & Restaurant
+&nbsp;
+<br>
+Burger Delivery in Islamabad
+Char Grill Central, Kins Crunchy Chicken, The Burger Company - Islamabad, 5 Star Pizza & Burger Hut, Burgers Etc., Burger Oye
+&nbsp;
+<br>
+Fast Food Delivery in Islamabad
+Street 1 Cafe, Hardees, District 6, Juicy Gossip, Mr. COD - Banni Galla, Crunchies (Safa Gold)
+&nbsp;
+<br>
+Chinese Delivery in Islamabad
+Tiger Temple, Ha' pi', Kim Mun Chinese - Safa Gold Mall, Golden Dragon, Dragon City, Cock 'N' Bull
+&nbsp;
+<br>
+
+Bulgaria   |  Romania   |   Hong Kong   |   Bangladesh   |   Singapore   |   Malaysia   |   Philippines   |   Thailand   |   Taiwan
+&nbsp;
+<br>
+<hr>
+© foodpanda
+Press
+&nbsp;
+<br>
+Help Center
+&nbsp;
+<br>
+Refunds with pandapay
+&nbsp;
+<br>
+pandapay Terms and Conditions
+&nbsp;
+<br>
+Terms and Conditions
+&nbsp;
+<br>
+Privacy policy
+&nbsp;
+<br>
+Security
+&nbsp;
+<br>
+Download foodpanda Apps
+&nbsp;
+<br>
+Human rights policy
+&nbsp;
+<br>
+Careers
+&nbsp;
+<br>
+Suggest a Restaurant
+&nbsp;
+<br>
+Corporate Customer
+&nbsp;
+<br>
+Cashback Terms and Conditions
+&nbsp;
+<br>
+All cuisines
+&nbsp;
+<br>
+foodpanda Magazine
+&nbsp;
+<br>
+Partner with Us
+&nbsp;
+<br>
+pandago - Request a Rider
+&nbsp;
+<br>
+foodpanda Vouchers & 
+&nbsp;
+<br>
+All cities
+&nbsp;
+<br>
+Update on COVID-19 in Pakistan
+&nbsp;
+<br>
+pandamart Grocery Delivery
+&nbsp;
+<br>
+pandapro - Monthly Subscription Programme
+&nbsp;
+<br>
+foodpanda Home Chef
+&nbsp;
+<br>
+Become an Affiliate
+&nbsp;
+<br>
+Ramzan deals
+&nbsp;
+<br>
+Areas delivered in Karachi
+&nbsp;
+<br>
+Areas delivered in 
+&nbsp;
+<br>
+Areas delivered in Lahore
+&nbsp;
+<br>
+Areas delivered in Islamabad
+&nbsp;
+<br>
+Areas delivered in Peshawar
+&nbsp;
+<br>
+
+
+
+
+</body>
+</html>
+
+
+
+</body>
+</html>
